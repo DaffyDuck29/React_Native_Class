@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>School Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script>
+    
+    
+    if(confirm('You Want to proceed?')){
+
+        
+
+        
+let name = prompt('What is your Name');
+console.log('Name: '+name);
+let fname = prompt('What is your father name');
+console.log('Father name: '+fname);
+let class1 = prompt('In which class you study?');
+console.log('Class :'+class1);
+let Last_class= prompt('What is your last qualification');
+console.log('Last Class :'+Last_class);
+let e_passingmarks = prompt('What is '+name+' Marks in english');
+console.log('English Marks : '+e_passingmarks);
+let p_passingmarks = prompt('What is '+name+' Marks in Physics');
+console.log('Physics Marks : '+p_passingmarks);
+let rollnumber = prompt('What is your rollnumber ');
+console.log('Address :'+rollnumber);
+
+console.log('Fees Status ');
+
+let admissionfees = prompt('How Much Admission Fees required? ');
+console.log('Admission Fees : '+admissionfees);
+let extracirculumfees = prompt('How Much Extra Circulum Fees Required');
+console.log('ExtraCirculumFees : '+extracirculumfees);
+let gamefees = prompt('How much gamefees required?');
+console.log('Working Skills'+gamefees);
+console.log('Result');
+if(e_passingmarks>50){
+    console.log('English:Passed');
+}
+else{
+    console.log('English:Failed');
+}
+
+if(p_passingmarks>50){
+    console.log('Physics:Passed');
+}
+else{
+    console.log('physics:Failed');
+}
+    }
+    else
+    {
+        alert('Reload Page to start School Management System in cosole ');
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
