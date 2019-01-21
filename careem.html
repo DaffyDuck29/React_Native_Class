@@ -1,0 +1,137 @@
+<html>
+
+<head>
+  <title>My Careem Application</title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <center>
+<button class="btn btn-info" onclick="alert('All Drivers list in your city are available'); RandomDriverChange(Driversname);updateDriverList(Driversname);Contact(DriversContact);" >
+  Drivers List
+</button>
+
+<button class="btn btn-info" onclick="alert('The Distance of Drivers from your location is now avalible');  RandomDistanceChange(DriversDistance); updateDriverDistance(DriversDistance);alert('Click on Book your Ride to book available Captain');">
+  Drivers Distance from your
+</button>
+
+<br / ><br / >
+
+<table border="3">
+  <tr>
+    <td>
+<h1>Drivers Name</h1>
+<h2><div id="numberList"></div></h2>
+</td>
+    <td>
+    <h1>Drivers Contact Info</h1>
+    <h2><div id="Contact"></div></h2>
+    </td>
+<td>
+<h1>Drivers Distance from your location</h1>
+<h2><div id="distance"></div></h2>
+</td>
+
+  </tr>
+</table>
+
+<h2>Available Driver Will be booked automatically Click <strong>Book your ride</strong> button to book your ride<br></h2>
+<button class="btn btn-info" onclick="RandomBooking(Driversname);BookRide(Driversname);alert('Your Careem Captain is now available kindly contact him via his phone number given in the chart');">Book your ride</button>
+
+
+<h1>Your Driver Name is </h1>
+<h3><div id="booking"></div></h3>
+
+</center>
+<script>
+
+
+
+
+
+
+var Driversname=["Ali Haider","Annas Shahid","Talha saeed","Faizan Ullah Kalhoro","Awais Ali","Abdul Wahid"];
+
+var DriversContact=["0315-2424242","0300-19191919","0321-34214244","0343-14242424","0333-353225425","0313424244"];
+
+var DriversDistance =["32min From your location","1 hour From your location","5min From your location","40 minutes From your location","3minutes From your location","2 hours from your location"];
+
+function updateDriverList(array){
+  var s="";
+  for(var i=0;i<array.length;i++){
+    s+="<br />"+array[i];
+  }
+  document.getElementById("numberList").innerHTML=s;
+}
+
+function Contact(array){
+  var n="";
+  for(var i=0;i<array.length;i++){
+    n+="<br />"+array[i];
+  }
+  document.getElementById("Contact").innerHTML=n;
+}
+
+function BookRide(array){
+  var a="";
+  for(var i=0;i<1;i++){
+    a+="<br />"+array[i];
+  }
+  document.getElementById("booking").innerHTML=a;
+}
+
+function updateDriverDistance(array){
+  var d="";
+  for(var i=0;i<array.length;i++){
+    d+="<br />"+array[i];
+  }
+
+document.getElementById("distance").innerHTML=d;
+}
+
+function RandomDriverChange(array){
+  var j,x,i=0,len=array.length;
+  for(i;i<len;i++){
+    j=Math.floor(Math.random()*len);
+    x=array[i];
+    array[i]=array[j];
+    array[j]=x;
+  }
+}
+
+
+function RandomBooking(array){
+  var j,x,i=0,len=array.length;
+  for(i;i<len;i++){
+    j=Math.floor(Math.random()*len);
+    x=array[i];
+    array[i]=array[j];
+    array[j]=x;
+  }
+}
+
+
+
+
+
+function RandomDistanceChange(array){
+  var j,x,i=0,len=array.length;
+  for(i;i<len;i++){
+    j=Math.floor(Math.random()*len);
+    x=array[i];
+    array[i]=array[j];
+    array[j]=x; 
+}
+
+}
+
+
+</script>
+</body>
+</html>
